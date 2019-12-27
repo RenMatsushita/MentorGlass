@@ -7,21 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C137C30F23B58605002D1834 /* CGRect+ScaledForCropping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C137C30E23B58605002D1834 /* CGRect+ScaledForCropping.swift */; };
+		C137C31123B58642002D1834 /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C137C31023B58642002D1834 /* Mentor.swift */; };
+		C137C31523B58711002D1834 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C137C31423B58711002D1834 /* SnapKit.framework */; };
+		C137C31623B58711002D1834 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C137C31423B58711002D1834 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C137C31923B58B49002D1834 /* MentorGlass.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C137C31823B58B49002D1834 /* MentorGlass.storyboard */; };
+		C137C31B23B5924F002D1834 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C137C31A23B5924F002D1834 /* Launch Screen.storyboard */; };
+		C1DE413323B5A04C007871DF /* MentorGlass5.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C1DE413223B5A04C007871DF /* MentorGlass5.mlmodel */; };
 		C1F17E6C23B46170005E3960 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F17E6B23B46170005E3960 /* AppDelegate.swift */; };
-		C1F17E6E23B46170005E3960 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F17E6D23B46170005E3960 /* SceneDelegate.swift */; };
 		C1F17E7023B46170005E3960 /* MentorGlassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F17E6F23B46170005E3960 /* MentorGlassViewController.swift */; };
 		C1F17E7523B46175005E3960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1F17E7423B46175005E3960 /* Assets.xcassets */; };
-		C1F17E8223B47C82005E3960 /* MentorGlass3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C1F17E8123B47C82005E3960 /* MentorGlass3.mlmodel */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C137C31723B58711002D1834 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C137C31623B58711002D1834 /* SnapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		C137C30E23B58605002D1834 /* CGRect+ScaledForCropping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+ScaledForCropping.swift"; sourceTree = "<group>"; };
+		C137C31023B58642002D1834 /* Mentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentor.swift; sourceTree = "<group>"; };
+		C137C31423B58711002D1834 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		C137C31823B58B49002D1834 /* MentorGlass.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MentorGlass.storyboard; sourceTree = "<group>"; };
+		C137C31A23B5924F002D1834 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		C1DE413223B5A04C007871DF /* MentorGlass5.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MentorGlass5.mlmodel; sourceTree = "<group>"; };
 		C1F17E6823B46170005E3960 /* MentorGlass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MentorGlass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F17E6B23B46170005E3960 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C1F17E6D23B46170005E3960 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C1F17E6F23B46170005E3960 /* MentorGlassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorGlassViewController.swift; sourceTree = "<group>"; };
 		C1F17E7423B46175005E3960 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C1F17E7923B46175005E3960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Extension/Info.plist; sourceTree = "<group>"; };
-		C1F17E8123B47C82005E3960 /* MentorGlass3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MentorGlass3.mlmodel; sourceTree = "<group>"; };
+		C1F17E7923B46175005E3960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +52,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C137C31523B58711002D1834 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C137C30D23B585E4002D1834 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C137C31023B58642002D1834 /* Mentor.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		C137C31323B58711002D1834 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C137C31423B58711002D1834 /* SnapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C1F17E5F23B46170005E3960 = {
 			isa = PBXGroup;
 			children = (
 				C1F17E6A23B46170005E3960 /* MentorGlass */,
 				C1F17E6923B46170005E3960 /* Products */,
+				C137C31323B58711002D1834 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,8 +97,10 @@
 			children = (
 				C1F17E8623B57792005E3960 /* App */,
 				C1F17E8323B5772F005E3960 /* Views */,
+				C137C30D23B585E4002D1834 /* Entity */,
 				C1F17E8523B5774C005E3960 /* Extension */,
 				C1F17E8423B57736005E3960 /* Resources */,
+				C1F17E7923B46175005E3960 /* Info.plist */,
 			);
 			path = MentorGlass;
 			sourceTree = "<group>";
@@ -65,6 +108,7 @@
 		C1F17E8323B5772F005E3960 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C137C31823B58B49002D1834 /* MentorGlass.storyboard */,
 				C1F17E6F23B46170005E3960 /* MentorGlassViewController.swift */,
 			);
 			path = Views;
@@ -73,9 +117,9 @@
 		C1F17E8423B57736005E3960 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C1F17E8123B47C82005E3960 /* MentorGlass3.mlmodel */,
+				C1DE413223B5A04C007871DF /* MentorGlass5.mlmodel */,
 				C1F17E7423B46175005E3960 /* Assets.xcassets */,
-				C1F17E7923B46175005E3960 /* Info.plist */,
+				C137C31A23B5924F002D1834 /* Launch Screen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -83,6 +127,7 @@
 		C1F17E8523B5774C005E3960 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				C137C30E23B58605002D1834 /* CGRect+ScaledForCropping.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -91,7 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				C1F17E6B23B46170005E3960 /* AppDelegate.swift */,
-				C1F17E6D23B46170005E3960 /* SceneDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -106,6 +150,8 @@
 				C1F17E6423B46170005E3960 /* Sources */,
 				C1F17E6523B46170005E3960 /* Frameworks */,
 				C1F17E6623B46170005E3960 /* Resources */,
+				C137C31223B586DA002D1834 /* Run Script - Carthage */,
+				C137C31723B58711002D1834 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,21 +200,46 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C137C31B23B5924F002D1834 /* Launch Screen.storyboard in Resources */,
+				C137C31923B58B49002D1834 /* MentorGlass.storyboard in Resources */,
 				C1F17E7523B46175005E3960 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C137C31223B586DA002D1834 /* Run Script - Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+			);
+			name = "Run Script - Carthage";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C1F17E6423B46170005E3960 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C137C31123B58642002D1834 /* Mentor.swift in Sources */,
 				C1F17E7023B46170005E3960 /* MentorGlassViewController.swift in Sources */,
-				C1F17E8223B47C82005E3960 /* MentorGlass3.mlmodel in Sources */,
+				C137C30F23B58605002D1834 /* CGRect+ScaledForCropping.swift in Sources */,
+				C1DE413323B5A04C007871DF /* MentorGlass5.mlmodel in Sources */,
 				C1F17E6C23B46170005E3960 /* AppDelegate.swift in Sources */,
-				C1F17E6E23B46170005E3960 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +366,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K3WSFBFNGQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MentorGlass/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -313,6 +388,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K3WSFBFNGQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MentorGlass/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
