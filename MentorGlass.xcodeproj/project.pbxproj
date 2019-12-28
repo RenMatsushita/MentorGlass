@@ -9,10 +9,16 @@
 /* Begin PBXBuildFile section */
 		C137C30F23B58605002D1834 /* CGRect+ScaledForCropping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C137C30E23B58605002D1834 /* CGRect+ScaledForCropping.swift */; };
 		C137C31123B58642002D1834 /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C137C31023B58642002D1834 /* Mentor.swift */; };
-		C137C31523B58711002D1834 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C137C31423B58711002D1834 /* SnapKit.framework */; };
-		C137C31623B58711002D1834 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C137C31423B58711002D1834 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C137C31923B58B49002D1834 /* MentorGlass.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C137C31823B58B49002D1834 /* MentorGlass.storyboard */; };
 		C137C31B23B5924F002D1834 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C137C31A23B5924F002D1834 /* Launch Screen.storyboard */; };
+		C1AB874823B6DAA700BB588B /* MentorGlassViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AB874723B6DAA700BB588B /* MentorGlassViewModel.swift */; };
+		C1AB874A23B6DAB100BB588B /* MentorGlassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AB874923B6DAB100BB588B /* MentorGlassModel.swift */; };
+		C1AB874E23B6DB1F00BB588B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1AB874B23B6DB1F00BB588B /* RxCocoa.framework */; };
+		C1AB874F23B6DB1F00BB588B /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1AB874B23B6DB1F00BB588B /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C1AB875023B6DB1F00BB588B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1AB874C23B6DB1F00BB588B /* RxSwift.framework */; };
+		C1AB875123B6DB1F00BB588B /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1AB874C23B6DB1F00BB588B /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C1AB875223B6DB1F00BB588B /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1AB874D23B6DB1F00BB588B /* RxRelay.framework */; };
+		C1AB875323B6DB1F00BB588B /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1AB874D23B6DB1F00BB588B /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C1DE413323B5A04C007871DF /* MentorGlass5.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C1DE413223B5A04C007871DF /* MentorGlass5.mlmodel */; };
 		C1F17E6C23B46170005E3960 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F17E6B23B46170005E3960 /* AppDelegate.swift */; };
 		C1F17E7023B46170005E3960 /* MentorGlassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F17E6F23B46170005E3960 /* MentorGlassViewController.swift */; };
@@ -20,13 +26,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C137C31723B58711002D1834 /* Embed Frameworks */ = {
+		C1AB875423B6DB2000BB588B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C137C31623B58711002D1834 /* SnapKit.framework in Embed Frameworks */,
+				C1AB875123B6DB1F00BB588B /* RxSwift.framework in Embed Frameworks */,
+				C1AB874F23B6DB1F00BB588B /* RxCocoa.framework in Embed Frameworks */,
+				C1AB875323B6DB1F00BB588B /* RxRelay.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -39,6 +47,11 @@
 		C137C31423B58711002D1834 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		C137C31823B58B49002D1834 /* MentorGlass.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MentorGlass.storyboard; sourceTree = "<group>"; };
 		C137C31A23B5924F002D1834 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		C1AB874723B6DAA700BB588B /* MentorGlassViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorGlassViewModel.swift; sourceTree = "<group>"; };
+		C1AB874923B6DAB100BB588B /* MentorGlassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorGlassModel.swift; sourceTree = "<group>"; };
+		C1AB874B23B6DB1F00BB588B /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		C1AB874C23B6DB1F00BB588B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		C1AB874D23B6DB1F00BB588B /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		C1DE413223B5A04C007871DF /* MentorGlass5.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MentorGlass5.mlmodel; sourceTree = "<group>"; };
 		C1F17E6823B46170005E3960 /* MentorGlass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MentorGlass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F17E6B23B46170005E3960 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,7 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C137C31523B58711002D1834 /* SnapKit.framework in Frameworks */,
+				C1AB875023B6DB1F00BB588B /* RxSwift.framework in Frameworks */,
+				C1AB874E23B6DB1F00BB588B /* RxCocoa.framework in Frameworks */,
+				C1AB875223B6DB1F00BB588B /* RxRelay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +85,9 @@
 		C137C31323B58711002D1834 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C1AB874B23B6DB1F00BB588B /* RxCocoa.framework */,
+				C1AB874D23B6DB1F00BB588B /* RxRelay.framework */,
+				C1AB874C23B6DB1F00BB588B /* RxSwift.framework */,
 				C137C31423B58711002D1834 /* SnapKit.framework */,
 			);
 			name = Frameworks;
@@ -110,6 +128,8 @@
 			children = (
 				C137C31823B58B49002D1834 /* MentorGlass.storyboard */,
 				C1F17E6F23B46170005E3960 /* MentorGlassViewController.swift */,
+				C1AB874723B6DAA700BB588B /* MentorGlassViewModel.swift */,
+				C1AB874923B6DAB100BB588B /* MentorGlassModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -150,8 +170,8 @@
 				C1F17E6423B46170005E3960 /* Sources */,
 				C1F17E6523B46170005E3960 /* Frameworks */,
 				C1F17E6623B46170005E3960 /* Resources */,
+				C1AB875423B6DB2000BB588B /* Embed Frameworks */,
 				C137C31223B586DA002D1834 /* Run Script - Carthage */,
-				C137C31723B58711002D1834 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,7 +237,9 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
 			);
 			name = "Run Script - Carthage";
 			outputFileListPaths = (
@@ -235,10 +257,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1AB874A23B6DAB100BB588B /* MentorGlassModel.swift in Sources */,
 				C137C31123B58642002D1834 /* Mentor.swift in Sources */,
 				C1F17E7023B46170005E3960 /* MentorGlassViewController.swift in Sources */,
 				C137C30F23B58605002D1834 /* CGRect+ScaledForCropping.swift in Sources */,
 				C1DE413323B5A04C007871DF /* MentorGlass5.mlmodel in Sources */,
+				C1AB874823B6DAA700BB588B /* MentorGlassViewModel.swift in Sources */,
 				C1F17E6C23B46170005E3960 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

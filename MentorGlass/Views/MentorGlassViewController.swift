@@ -10,30 +10,42 @@ import UIKit
 import AVFoundation
 import Vision
 import CoreML
-import SnapKit
+import SafariServices
+import RxSwift
+import RxCocoa
 
-class MentorGlassViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+final class MentorGlassViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
-    @IBOutlet weak var cameraView: UIView!
-//    @IBOutlet weak var faceImageView: UIImageView!
-//    @IBOutlet weak var resultLabel: UILabel!
-    
+    @IBOutlet private weak var cameraView: UIView!
     @IBOutlet private weak var resultLabel: UILabel!
     
-    var ciImage: CIImage?
-    var captureLayer: AVCaptureVideoPreviewLayer?
+    private var ciImage: CIImage?
+    private var captureLayer: AVCaptureVideoPreviewLayer?
     
     @IBOutlet private weak var mentorView: UIView!
     @IBOutlet private weak var mentorNameLabel: UILabel!
     @IBOutlet private weak var mentorCorseLabel: UILabel!
     @IBOutlet private weak var mentorUniversityLabel: UILabel!
     @IBOutlet private weak var mentorDescLabel: UILabel!
+    @IBOutlet private weak var destinationFacebookButton: UIButton!
+    
+    
+    private let disposeBag: DisposeBag = DisposeBag()
+    private var currentMentor: Mentor?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupCamera()
         configureMentorView()
+        
+        destinationFacebookButton.rx.tap
+            .subscribe(onNext: { _ in
+                guard let _currentMentor: Mentor = self.currentMentor else { return }
+                let safariViewController = SFSafariViewController(url: _currentMentor.facebookURL)
+                self.present(safariViewController, animated: true, completion: nil)
+            })
+            .disposed(by: disposeBag)
     }
     
     override func viewDidLayoutSubviews() {
@@ -43,7 +55,6 @@ class MentorGlassViewController: UIViewController, AVCaptureVideoDataOutputSampl
     func setupCamera() {
         let session = AVCaptureSession()
         captureLayer = AVCaptureVideoPreviewLayer(session: session)
-//        cameraView.layer.addSublayer(captureLayer!)
         cameraView.layer.insertSublayer(captureLayer!, at: 0)
         
         guard let device = AVCaptureDevice.default(for: .video) else { return }
@@ -108,11 +119,14 @@ class MentorGlassViewController: UIViewController, AVCaptureVideoDataOutputSampl
         let image = CIImage(cgImage: cgImage)
         
         guard let model = try? VNCoreMLModel(for: MentorGlass5().model) else { return }
+    
         let request = VNCoreMLRequest(model: model) { request, error in
             guard let results = request.results as? [VNClassificationObservation] else { return }
             guard let mostConfidentResult = results.first else { return }
-
+            
             DispatchQueue.main.async {
+                print(mostConfidentResult.hasPrecisionRecallCurve)
+                print(mostConfidentResult.hasMinimumPrecision(0.8, forRecall: 0.8))
                 let mentor = self.searchMentor(id: mostConfidentResult.identifier)
                 self.updateMentorView(mentor: mentor)
             }
@@ -124,9 +138,13 @@ class MentorGlassViewController: UIViewController, AVCaptureVideoDataOutputSampl
     func configureMentorView() {
         mentorView.isHidden = true
         mentorView.alpha = 0.9
+        
+        destinationFacebookButton.layer.cornerRadius = 4
+        destinationFacebookButton.clipsToBounds = true
     }
     
     func updateMentorView(mentor: Mentor) {
+        currentMentor = mentor
         mentorView.isHidden = false
         mentorNameLabel.text = mentor.name
         mentorCorseLabel.text = mentor.corse
